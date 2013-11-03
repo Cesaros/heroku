@@ -1,0 +1,10 @@
+
+require "koala"
+
+class ClienteFacebook 
+	@graph=koala::Facebook::API.new("CAACEdEose0cBAPwuCHZB0avQswFRdTt9eZAZBJkANC8QHGsg6mmsEquAJ6FzvZA0ZC15dacLrEHAxMDKpW3mgkvuRcuoOcBM9c4BQ5e3ZCz7d3Glp6TzfgM2AshAJonhmxpoMUsJb3qIFcpIbKjltHlFfTNr4ZBBlZCZBOnely0IeyvvYqWAsXkCZCc7nGS8b6IoAFRCk7JrydvwZDZD")
+
+end
+
+puts @graph.get_connections('me', 'feed').first["message"]
+
